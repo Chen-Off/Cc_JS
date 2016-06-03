@@ -1,0 +1,22 @@
+function touchStart(event) {
+        event.preventDefault();//锁定屏幕，禁止滚动
+    }
+    function touchMove(event) {
+        event.preventDefault();
+        touch = event.touches[0];
+        touch.pageX;
+    };
+
+    function touchEnd(event) {
+        document.body.removeEventListener("touchstart", touchStart, false);//解锁移除动作
+        document.body.removeEventListener("touchmove", touchMove, false);
+    }
+
+    document.body.addEventListener("touchstart", touchStart, false);//添加动作
+    document.body.addEventListener("touchmove", touchMove, false);
+    document.body.addEventListener("touchend", touchEnd, false);
+    
+//client / clientY：// 触摸点相对于浏览器窗口viewport的位置 
+//pageX / pageY：// 触摸点相对于页面的位置 
+//screenX /screenY：// 触摸点相对于屏幕的位置 
+//identifier： // touch对象的unique ID 
