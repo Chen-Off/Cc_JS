@@ -1,3 +1,4 @@
+//手机模版移动刷新
 function touchStart(event) {
         event.preventDefault();//锁定屏幕，禁止滚动
     }
