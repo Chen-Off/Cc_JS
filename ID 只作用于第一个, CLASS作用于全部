@@ -1,0 +1,8 @@
+$(document).ready(function(){
+   $('#hidden_box').click(function() {
+       $('.tiny_window_class').css('transform','translate3d(0, -300px, 0)');
+       $('.tiny_window_class').css('visibility', 'hidden');
+
+       $('#hidden_box').css('display','none');
+   });
+});
